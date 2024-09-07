@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   const exportButton = document.getElementById('exportTabs');
   const importButton = document.getElementById('importTabs');
-  const importFile = document.getElementById('importFile');
   const tabCountElement = document.getElementById('tabCount');
 
   // 导出标签页
@@ -25,27 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // 导入标签页
   importButton.addEventListener('click', function() {
-    importFile.click();
-  });
-
-  // 处理文件选择框的 change 事件
-  importFile.addEventListener('change', function(event) {
-    const file = event.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = function(e) {
-        const content = e.target.result;
-        const lines = content.split('\n');
-        lines.shift(); // 移除标题行
-        lines.forEach((line) => {
-          const [id, title, url] = line.split(',');
-          if (url) {
-            browser.tabs.create({ url: url.trim() });
-          }
-        });
-      };
-      reader.readAsText(file);
-    }
+    const importWindow = window.open('import.html', '_blank');
   });
 
   // 显示当前标签页数量
