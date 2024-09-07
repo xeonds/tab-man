@@ -1,0 +1,14 @@
+body {
+  width: 300px;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+button {
+  margin: 5px 0;
+  padding: 5px 10px;
+}
+
+#tabCount {
+  margin-top: 10px;
+}
