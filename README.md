@@ -4,10 +4,10 @@ MAN  what can I say, (lose tabs
 
 Tabs, out! (export tabs
 
-## TODO
+## Features
 
-- tabs deduplication by url
-- bug fix: when tab's title not loaded, the export failed
+- deduplicate tabs by url
+- import/export tabs with csv format
 
 ## LICENSE
 
